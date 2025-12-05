@@ -1,0 +1,313 @@
+/* #region repere css */
+/* X */
+#pts-css1 {
+  width: 100%;
+  height: 0px;
+  border: solid 1px white;
+  position: absolute;
+  top: var(--yPosition1);
+  left: 0%;
+  z-index: -1;
+}
+/* Y */
+#pts-css2 {
+  width: 0px;
+  height: 100%;
+  border: solid 1px white;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  z-index: -1;
+}
+/* 50px */
+#pts-css3 {
+  width: 50px;
+  height: 50px;
+  border: solid 1px white;
+  position: absolute;
+  top: var(--yPosition1);
+  left: 50%;
+  z-index: -1;
+  translate: -50% -50%;
+}
+/* 100px */
+#pts-css4 {
+  width: 100px;
+  height: 100px;
+  border: solid 1px white;
+  position: absolute;
+  top: var(--yPosition1);
+  left: 50%;
+  z-index: -1;
+  translate: -50% -50%;
+}
+/*200px */
+#pts-css5 {
+  width: 200px;
+  height: 200px;
+  border: solid 1px white;
+  position: absolute;
+  top: var(--yPosition1);
+  left: 50%;
+  z-index: -1;
+  translate: -50% -50%;
+}
+/* 300px */
+#pts-css6 {
+  width: 300px;
+  height: 300px;
+  border: solid 1px white;
+  position: absolute;
+  top: var(--yPosition1);
+  left: 50%;
+  z-index: -1;
+  translate: -50% -50%;
+}
+
+/* 500px */
+#pts-css7 {
+  width: 500px;
+  height: 500px;
+  border: solid 1px white;
+  position: absolute;
+  top: var(--yPosition1);
+  left: 50%;
+  z-index: -1;
+  translate: -50% -50%;
+}
+/* 800px */
+#pts-css8 {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  height: 800px;
+  border: solid 1px white;
+  position: absolute;
+  top: var(--yPosition1);
+  left: 50%;
+  z-index: -1;
+  translate: -50% -50%;
+}
+/* 1000px */
+#pts-css9 {
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  height: 1000px;
+  border: solid 1px white;
+  position: absolute;
+  top: var(--yPosition1);
+  left: 50%;
+  z-index: -1;
+  translate: -50% -50%;
+}
+/* 1200px */
+#pts-css10 {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  height: 1200px;
+  border: solid 1px white;
+  position: absolute;
+  top: var(--yPosition1);
+  left: 50%;
+  z-index: -1;
+  translate: -50% -50%;
+}
+/* #endregion */
+
+/* #region repere break points */
+
+#mobileP {
+  position: absolute;
+  top: 150%;
+  left: 10px;
+  z-index: var(--zindex-repere);
+  width: 320px;
+  height: 568px;
+  border: solid 2px red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Mp {
+  font-size: 40px;
+  writing-mode: horizontal-tb;
+  text-align: center;
+  margin: auto;
+  border: solid 1px wheat;
+}
+#mobileP:hover {
+  transform: rotate(90deg);
+}
+#mobileP:hover #Mp {
+  transform: rotate(-90deg);
+}
+
+#mobileS {
+  position: absolute;
+  top: 150%;
+  left: 400px;
+  z-index: var(--zindex-repere);
+  width: 375px;
+  height: 667px;
+  border: solid 2px green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Ms {
+  font-size: 40px;
+  writing-mode: horizontal-tb;
+  text-align: center;
+  margin: auto;
+  border: solid 1px wheat;
+}
+#mobileS:hover {
+  transform: rotate(90deg);
+}
+#mobileS:hover #Ms {
+  transform: rotate(-90deg);
+}
+
+#mobileG {
+  position: absolute;
+  top: 150%;
+  left: 900px;
+  z-index: var(--zindex-repere);
+  width: 414px;
+  height: 736px;
+  border: solid 2px orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Mg {
+  font-size: 40px;
+  writing-mode: horizontal-tb;
+  text-align: center;
+  margin: auto;
+  border: solid 1px wheat;
+}
+#mobileG:hover {
+  transform: rotate(90deg);
+}
+#mobileG:hover #Mg {
+  transform: rotate(-90deg);
+}
+
+#tabletteS {
+  position: absolute;
+  top: 150%;
+  left: 1400px;
+  z-index: var(--zindex-repere);
+  width: 768px;
+  height: 1024px;
+  border: solid 2px blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Ts {
+  font-size: 80px;
+  writing-mode: horizontal-tb;
+  text-align: center;
+  margin: auto;
+  border: solid 1px wheat;
+}
+#tabletteS:hover {
+  transform: rotate(90deg);
+}
+#tabletteS:hover #Ts {
+  transform: rotate(-90deg);
+}
+
+#tabletteG {
+  position: absolute;
+  top: 150%;
+  left: 2300px;
+  z-index: var(--zindex-repere);
+  width: 1024px;
+  height: 1366px;
+  border: solid 2px purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Tg {
+  font-size: 80px;
+  writing-mode: horizontal-tb;
+  text-align: center;
+  margin: auto;
+  border: solid 1px wheat;
+}
+#tabletteG:hover {
+  transform: rotate(90deg);
+}
+#tabletteG:hover #Tg {
+  transform: rotate(-90deg);
+}
+
+#ecranP {
+  position: absolute;
+  top: 150%;
+  left: 3500px;
+  z-index: var(--zindex-repere);
+  width: 1366px;
+  height: 768px;
+  border: solid 2px yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Ep {
+  font-size: 100px;
+  writing-mode: horizontal-tb;
+  text-align: center;
+  margin: auto;
+  border: solid 1px wheat;
+}
+#ecranP:hover {
+  transform: rotate(90deg);
+}
+#ecranP:hover #Ep {
+  transform: rotate(-90deg);
+}
+
+#ecranG {
+  position: absolute;
+  top: 150%;
+  left: 5000px;
+  z-index: var(--zindex-repere);
+  width: 1920px;
+  height: 1080px;
+  border: solid 2px cyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Eg {
+  font-size: 100px;
+  writing-mode: horizontal-tb;
+  text-align: center;
+  margin: auto;
+  border: solid 1px wheat;
+}
+#ecranG:hover {
+  transform: rotate(90deg);
+}
+#ecranG:hover #Eg {
+  transform: rotate(-90deg);
+}
+
+/* #endregion repere break points */
+
+#exemp {
+  border: solid 3px yellow;
+  padding: 10px;
+  margin: 10px;
+  position: absolute;
+  top: 10%;
+  left: 100%;
+  width: 50%;
+}

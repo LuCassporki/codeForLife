@@ -1,0 +1,589 @@
+/* #region */
+/* --------------------- */
+/* RESET DE BASE */
+/* --------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* Pour debug visuel temporaire : */
+  /* border: solid 1px red; */
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: black;
+  color: white;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+/* --------------------- */
+/* STRUCTURE PRINCIPALE */
+/* --------------------- */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: gray;
+  /* border: 2px solid white; */
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: blueviolet;
+}
+
+/* --------------------- */
+/* SECTIONS LATÉRALES */
+/* --------------------- */
+.backend,
+.frontend {
+  max-width: 20%;
+  padding: 1rem;
+  background: purple;
+  /* border: 2px solid yellow; */
+}
+
+/* --------------------- */
+/* ARBRE CENTRAL */
+/* --------------------- */
+.arbrefull {
+  flex: 1;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Variables CSS */
+:root {
+  --ecorce: #000;
+  --opacite: 0;
+  --transition: 0.4s ease;
+}
+
+/* Racines, tronc, branches */
+.racines {
+  height: 20%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  border: 2px solid red;
+}
+
+.tronc {
+  height: 40%;
+  width: 20%;
+  background: var(--ecorce);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid red;
+}
+
+.branche1,
+.branche2,
+.branche3 {
+  position: absolute;
+  background: var(--ecorce);
+  border-radius: 50% 50% 0 0;
+  transition: transform var(--transition);
+  border: 2px solid red;
+}
+
+.branche1 {
+  height: 140%;
+  width: 50%;
+  left: -20%;
+  bottom: 90%;
+  transform: rotate(-10deg);
+}
+
+.branche2 {
+  height: 100%;
+  width: 10%;
+  left: 45%;
+  top: 5%;
+}
+
+.branche3 {
+  height: 140%;
+  width: 50%;
+  left: 70%;
+  bottom: 90%;
+  transform: rotate(10deg);
+}
+
+/* --------------------- */
+/* NIVEAUX DE BRANCHES */
+/* --------------------- */
+.arbre {
+  position: relative;
+  top: 1%;
+  left: 0%;
+  width: 80%;
+  height: 50%;
+  border: 2px solid red;
+}
+
+.N01,
+.N02,
+.N03,
+.N0f {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+
+.N01 {
+  top: 50%;
+  left:30%;
+  transform: rotate(-50deg);
+}
+
+.N1 {
+  height: 15%;
+  width: 80%;
+  background: blue;
+  border-radius: 0 100% 0 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+}
+
+/* Sous-branches */
+.N02 {
+  top: 150%;
+  left: 20%;
+  transform: rotate(90deg);
+  /**************************************************************************************************/
+  border: 1px solid blue;
+}
+
+.N21,
+.N22,
+.N23,
+.N24 {
+  height: 60%;
+  width: 100%;
+  background: orange;
+  border-radius: 0 100% 0 50%;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  transform: translate(0, -50%);
+  /* opacity: var(--opacite); */
+  opacity: 1;
+  transition: opacity var(--transition);
+  border: 2px solid red;
+}
+
+.N21:hover,
+.N22:hover,
+.N23:hover,
+.N24:hover {
+  opacity: 1;
+}
+
+/* Troisième niveau */
+.N03 {
+  top: -30%;
+  left: -20%;
+  transform: rotate(20deg);
+  border: 2px solid red;
+}
+
+.N31,
+.N32,
+.N33,
+.N34 {
+  height: 60%;
+  width: 100%;
+  background: yellow;
+  border-radius: 0 100% 0 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+  /* opacity: var(--opacite); */
+  opacity: 1;
+  transition: opacity var(--transition);
+  border: 2px solid red;
+}
+
+.N31:hover,
+.N32:hover,
+.N33:hover,
+.N34:hover {
+  opacity: 1;
+}
+
+/* Feuilles */
+.N0f {
+  top: -50%;
+  left: 50%;
+  transform: rotate(90deg);
+  border: 2px solid red;
+}
+
+.feuilles {
+  width: 50%;
+  height: 100%;
+  background: green;
+  border-radius: 0 100% 0 100%;
+  border: 1px solid black;
+  transition: transform var(--transition), background var(--transition);
+  border: 2px solid red;
+}
+
+.N0f:hover .feuilles {
+  transform: scale(1.3);
+  background: limegreen;
+}
+
+/* #endregion */
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  border: solid 1px red;
+}
+body {
+  height: 99vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: black;
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: solid 2px white;
+  background: gray;
+}
+section {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  border: solid 2px orange;
+  background: blueviolet;
+}
+h1,
+h2,
+h3 {
+  color: white;
+  text-align: center;
+}
+.arbrefull {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-end;
+}
+.backend {
+  height: auto;
+  max-width: 20%;
+  display: flex;
+  flex-direction: column;
+  border: solid 2px yellow;
+  background: purple;
+}
+.frontend {
+  height: auto;
+  max-width: 20%;
+  display: flex;
+  flex-direction: column;
+  border: solid 2px yellow;
+  background: purple;
+}
+h1 {
+  color: white;
+  text-align: center;
+}
+div {
+  height: 20vh;
+  width: 20%;
+  border: solid 0px green;
+}
+.racines {
+  height: 20%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+:root { --rot: background: rgba(255, 255, 255, 0);}
+:root {--ecorse: black;
+
+:root {
+  --opaciter: 0;
+}
+
+.tronc {
+  height: 40%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: var(--ecorse);
+}
+.branche2 {
+  height: 100%;
+  width: 10%;
+  background: var(--ecorse);
+  position: relative;
+  top: 5%;
+  left: 45%;
+  border-radius: 50% 50% 0% 0%;
+  transform: rotate(0deg);
+  z-index: 1;
+}
+.branche1,
+.branche3 {
+  height: 140%;
+  width: 50%;
+  background: var(--ecorse);
+  position: relative;
+  top: -85%;
+}
+.branche1 {
+  position: relative;
+  left: -20%;
+  border-radius: 0% 100% 0% 0%;
+  transform: rotate(-10deg);
+  z-index: 2;
+}
+
+.branche3 {
+  position: relative;
+  left: 20%;
+  border-radius: 100% 0% 0% 0%;
+  transform: rotate(10deg);
+  z-index: 2;
+}
+.arbre {
+  height: 50%;
+  width: 80%;
+  background: var(--rot);
+  position: relative;
+  top: 1%;
+  left: 0%;
+  z-index: 2;
+}
+.N01,
+.N02,
+.N03,
+.N0f {
+  height: 100%;
+  width: 60%;
+  background: var(--rot)
+  border-radius: 0% 0%;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+}
+.N01 {
+  position: relative;
+  top: -25%;
+  left: 30%;
+  transform: rotate(-50deg);
+  opacity: 1;
+}
+.N1 {
+  height: 15%;
+  width: 100%;
+  background: blue;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  border-radius: 0% 100% 0% 50%;
+  transform: translate(0%, -50%) rotate(0deg);
+  z-index: 3;
+}
+
+.N02 {
+  position: relative;
+  top: -15%;
+  left: -20%;
+  transform: rotate(30deg);
+  opacity: 1;
+}
+.N21,
+.N22,
+.N23,
+.N24 {
+  height: 60%;
+  width: 100%;
+  background: orange;
+  opacity: 1;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  border-radius: 0% 100% 0% 50%;
+  transform: translate(0%, -50%) rotate(0deg);
+  z-index: 3;
+}
+.N21 {
+  position: relative;
+  top: 70%;
+  left: 38%;
+  opacity: var(--opaciter);
+}
+.N22 {
+  position: relative;
+  top: -90%;
+  left: 80%;
+  opacity: var(--opaciter);
+}
+.N23 {
+  position: relative;
+  top: -250%;
+  left: 125%;
+  opacity: var(--opaciter);
+}
+.N24 {
+  position: relative;
+  top: -400%;
+  left: 170%;
+  opacity:var(--opaciter);
+}
+
+.N03 {
+  position: relative;
+  top: -30%;
+  left: -20%;
+  transform: rotate(20deg);
+}
+.N31,
+.N32,
+.N33,
+.N34 {
+  height: 60%;
+  width: 100%;
+  background: yellow;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  border-radius: 0% 100% 0% 50%;
+  transform: translate(0%, -50%) rotate(0deg);
+  z-index: 3;
+}
+.N31 {
+  position: relative;
+  top: 70%;
+  left: 40%;
+  opacity: var(--opaciter);
+}
+.N32 {
+  position: relative;
+  top: -60%;
+  left: 90%;
+  opacity: var(--opaciter);
+}
+.N33 {
+  position: relative;
+  top: -190%;
+  left: 130%;
+  opacity: var(--opaciter);
+}
+.N34 {
+  position: relative;
+  top: -320%;
+  left: 175%;
+  opacity: var(--opaciter);
+}
+.N0f {
+  position: relative;
+  top: -50%;
+  left: 50%;
+  transform: rotate(90deg);
+  opacity: 1;
+}
+.feuilles {
+  height: 100%;
+  width: 50%;
+  background: green;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  border: solid 1px black;
+  border-radius: 0% 100% 0% 100%;
+  transform: translate(0%, -50%) rotate(0deg);
+  z-index: 2;
+  opacity: .1;
+}
+
+.N1:hover .N21,
+.N1:hover .N22,
+.N1:hover .N23,
+.N1:hover .N24
+{
+opacity: 1;
+}
+
+.N21:hover .N31,
+.N21:hover .N32,
+.N21:hover .N33,
+.N21:hover .N34
+ {
+  opacity: 1;
+}
+
+.N22:hover .N31, 
+.N22:hover .N32,
+.N22:hover .N33,
+.N22:hover .N34 
+{
+  opacity: 1;
+}
+
+.N23:hover .N31 
+.N23:hover .N34
+.N23:hover .N32
+.N23:hover .N33 
+{
+  opacity: 1;
+}
+
+.N24:hover .N31
+.N24:hover .N32 
+.N24:hover .N33
+.N24:hover .N34 
+{
+  opacity: 1;
+}
+
+.N31:hover .feuilles {
+  background-color: limegreen;
+  transform: scale(1.3) rotate(10deg);
+  opacity: 1;
+}
+*/

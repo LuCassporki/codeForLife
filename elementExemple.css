@@ -1,0 +1,2352 @@
+/* #region VARIABLES GLOBALES*/
+/* =======================================================
+   ======================================================= */
+:root {
+  --border-width: 10px;
+  --color1: red; /* Couleur principale pour les démos */
+}
+/* #endregion */
+
+/* #region STYLES GÉNÉRAUX DE CONTENEUR*/
+/* =======================================================
+   ======================================================= */
+.fond-visu,
+.fond-visu2,
+.contentp,
+.contentS,
+.contentC,
+.contentO,
+.contentA,
+.contentF,
+.contentF1,
+.sticky-parent {
+  width: auto;
+  height: auto;
+  background-color: lightslategray;
+  display: flex;
+}
+
+.fond-visu,
+.fond-visu2 {
+  /* Styles pour les sections de bordure et radius */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Base pour les sections de démo (Flex/Grid) */
+.flex-container,
+.grid-container {
+  background-color: #f0f0f0;
+  border: 1px solid black;
+  padding: 5px;
+  width: 100%;
+}
+.flex-container {
+  min-height: 100px;
+  gap: 5px;
+}
+.type {
+  color: blue;
+}
+section {
+  border: solid 1px black;
+}
+/* #endregion */
+
+/* #region  1. MODIF : BORDURES (border-style) */
+/* =======================================================
+======================================================= */
+.solid,
+.dashed,
+.double,
+.dotted,
+.groove,
+.inset,
+.outset,
+.ridge {
+  background-color: white;
+  color: black;
+  width: 100px;
+  height: auto;
+  text-align: center;
+  border-width: var(--border-width);
+  border-color: var(--color1);
+}
+
+.solid {
+  border-style: solid;
+}
+.dashed {
+  border-style: dashed;
+}
+.double {
+  border-style: double;
+}
+.dotted {
+  border-style: dotted;
+}
+.groove {
+  border-style: groove;
+}
+.inset {
+  border-style: inset;
+}
+.outset {
+  border-style: outset;
+}
+.ridge {
+  border-style: ridge;
+}
+/* #endregion */
+
+/* #region 2. MODIF : BORDURES (border-radius)*/
+/* =======================================================
+   ======================================================= */
+.radius8,
+.radius7,
+.radius6,
+.radius5,
+.radius4,
+.radius3,
+.radius2,
+.radius1 {
+  background-color: white;
+  color: black;
+  width: 100px;
+  height: auto;
+  border: solid 5px var(--color1);
+  text-align: center;
+  width: auto;
+}
+
+.radius1 {
+  border-radius: 0% 0% 0% 0%;
+}
+.radius2 {
+  border-radius: 50% 50% 50% 50%; /* Cercle ou ovale parfait */
+}
+.radius3 {
+  border-radius: 50% 0% 50% 0%;
+}
+.radius4 {
+  border-radius: 0% 100% 0% 100%;
+}
+.radius5 {
+  border-radius: 50px 0px 50px 0px;
+}
+.radius6 {
+  border-radius: 50px 0px 0px 50px;
+}
+.radius7 {
+  border-radius: 10px;
+}
+.radius8 {
+  border-radius: 0px;
+}
+/* #endregion */
+
+/* #region 3. PLACER : PADDING & MARGIN*/
+/* =======================================================
+   ======================================================= */
+/* PADDING */
+.padding4,
+.padding3,
+.padding2,
+.padding1 {
+  text-align: center;
+  border: solid 1px var(--color1);
+  background-color: white;
+  width: auto;
+}
+.pad {
+  background-color: white;
+  border: solid 2px black;
+  color: black;
+}
+.padding1 {
+  padding: 10px; /* Toutes les directions */
+}
+.padding2 {
+  padding: 10px 20px; /* Vertical / Horizontal */
+}
+.padding3 {
+  padding: 10px 15px 20px 25px; /* Haut / Droite / Bas / Gauche */
+}
+.padding4 {
+  padding: 10px;
+} /* Doublon conservé pour le moment, mais identique à padding1 */
+
+/* MARGIN */
+.expli-pad {
+  font-size: 14px;
+  text-align: center;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.descrp {
+  font-size: 20px;
+  width: 200px;
+}
+.margin1 {
+  margin: auto; /* Centrage horizontal */
+}
+.margin2 {
+  margin-top: 10px;
+}
+.margin3 {
+  margin: 20px 10px 30px 5px;
+}
+.margin4 {
+  margin: 10px;
+  border: solid 2px green;
+}
+.margin1,
+.margin2,
+.margin3,
+.margin4 {
+  color: black;
+  border: solid 2px black;
+  background-color: lightgrey;
+  width: auto;
+}
+/* #endregion */
+
+/* #region 4. MODIF : BACKGROUND (Couleur, Image, Répétition, Position, Taille, Attachement, Origine, Clip)*/
+/* =======================================================
+   ======================================================= */
+/* BACKGROUND-COLOR */
+.fond-visuB1 {
+  background-color: purple;
+}
+.fond-visuB2 {
+  background-color: #1d8ec2;
+}
+.fond-visuB3 {
+  background-color: rgb(128, 100, 128);
+}
+.fond-visuB4 {
+  background-color: rgb(128, 0, 128, 0.5);
+}
+.fond-visuB5 {
+  background-color: transparent;
+}
+
+/* BACKGROUND-IMAGE (Gradients) */
+.fond-visuI2 {
+  background-image: linear-gradient(
+    to right,
+    red,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+}
+.fond-visuI3 {
+  background-image: radial-gradient(
+    circle,
+    red,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+}
+.fond-visuI2,
+.fond-visuI3,
+.fond-visuI4 {
+  border: solid 1px white;
+  width: 100%;
+  height: 100px;
+}
+.fond-visuI4 {
+  background-image: none;
+}
+
+/* BASE pour les démos d'images de fond */
+.fond-visuIr7,
+.fond-visuIr6,
+.fond-visuIr5,
+.fond-visuIr4,
+.fond-visuIr3,
+.fond-visuIr2,
+.fond-visuIr1,
+.fond-visuP1,
+.fond-visuP2,
+.fond-visuP3,
+.fond-visuP4,
+.fond-visuP5,
+.fond-visuP6,
+.fond-visuS1,
+.fond-visuS2,
+.fond-visuS3,
+.fond-visuS4,
+.fond-visuS5,
+.fond-visuA1,
+.fond-visuA2,
+.fond-visuA3,
+.fond-visuO1,
+.fond-visuO2,
+.fond-visuO3,
+.fond-visuC1,
+.fond-visuC2,
+.fond-visuC3 {
+  background-image: url("media/img/ARBRE.jpg");
+  border: solid 1px white;
+}
+
+/* BACKGROUND-REPEAT */
+.fond-visuIr7,
+.fond-visuIr6,
+.fond-visuIr5,
+.fond-visuIr4,
+.fond-visuIr3,
+.fond-visuIr2,
+.fond-visuIr1 {
+  width: 100%;
+  height: 300px;
+}
+.fond-visuIr1 {
+  background-repeat: repeat;
+}
+.fond-visuIr2 {
+  background-repeat: repeat-x;
+}
+.fond-visuIr3 {
+  background-repeat: repeat-y;
+  width: 50%;
+  height: 800px;
+}
+.fond-visuIr4 {
+  background-repeat: space;
+  height: 900px;
+}
+.fond-visuIr5 {
+  background-repeat: round;
+  height: 900px;
+}
+.fond-visuIr6 {
+  background-repeat: no-repeat;
+}
+.fond-visuIr7 {
+  background-repeat: space repeat;
+}
+
+/* BACKGROUND-POSITION */
+.fond-visuP1,
+.fond-visuP2,
+.fond-visuP3,
+.fond-visuP4,
+.fond-visuP5,
+.fond-visuP6 {
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 280px;
+  font-size: 15px;
+}
+.fond-visuP1 {
+  background-position: top left;
+}
+.fond-visuP2 {
+  background-position: top center;
+}
+.fond-visuP3 {
+  background-position: top right;
+}
+.fond-visuP4 {
+  background-position: 50% 50%;
+}
+.fond-visuP5 {
+  background-position: bottom right;
+}
+.fond-visuP6 {
+  background-position: bottom left;
+}
+
+/* BACKGROUND-SIZE */
+.fond-visuS1,
+.fond-visuS2,
+.fond-visuS3,
+.fond-visuS4,
+.fond-visuS5 {
+  width: 220px;
+  height: 280px;
+}
+.fond-visuS1 {
+  background-size: auto;
+}
+.fond-visuS2 {
+  background-size: contain;
+}
+.fond-visuS3 {
+  background-size: cover;
+}
+.fond-visuS4 {
+  background-size: 50% 50%;
+}
+.fond-visuS5 {
+  background-size: 50px 50px;
+}
+
+/* BACKGROUND-ATTACHMENT */
+.fond-visuA1,
+.fond-visuA2,
+.fond-visuA3 {
+  width: 33%;
+  height: 500px;
+}
+.fond-visuA1 {
+  background-attachment: scroll;
+}
+.fond-visuA2 {
+  background-attachment: fixed;
+}
+.fond-visuA3 {
+  background-attachment: local;
+}
+.contentA {
+  /* Style du conteneur pour l'effet d'attachement */
+  border: 1px solid black;
+  height: 500px;
+  overflow-y: scroll; /* Important pour voir l'effet scroll/fixed/local */
+}
+
+/* BACKGROUND-ORIGIN */
+.contentO {
+  padding: 10px;
+}
+.fond-visuO1,
+.fond-visuO2,
+.fond-visuO3 {
+  width: 33%;
+  height: 500px;
+}
+.fond-visuO1 {
+  background-origin: padding-box;
+}
+.fond-visuO2 {
+  background-origin: border-box;
+}
+.fond-visuO3 {
+  background-origin: content-box;
+}
+
+/* BACKGROUND-CLIP */
+.fond-visuC1,
+.fond-visuC2,
+.fond-visuC3 {
+  background-size: 100%;
+  width: 33%;
+  height: 500px;
+  margin: 20px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+}
+.fond-visuC1 {
+  background-clip: border-box;
+}
+.fond-visuC2 {
+  background-clip: padding-box;
+}
+.fond-visuC3 {
+  background-clip: content-box;
+}
+
+/* BACKGROUND-CLIP: text (Effet spécial) */
+.fond-visuC4 {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  height: 500px;
+  background-color: white;
+}
+.fond-visuC5 {
+  border: solid 1px white;
+  background-image: url("media/img/ARBRE.jpg");
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text; /* Pour compatibilité Webkit */
+  color: transparent;
+  font-size: 8rem;
+}
+/* #endregion */
+
+/* #region 5. STYLER : FONT*/
+/* =======================================================
+   ======================================================= */
+.font-serif {
+  font-family: serif;
+}
+.font-sans {
+  font-family: sans-serif;
+}
+.font-serif,
+.font-sans {
+  border: solid 1px white;
+  color: white;
+}
+
+/* FONT-SIZE (Unités) */
+.px {
+  font-size: 10px;
+  border: solid 1px red;
+}
+.em {
+  font-size: 0.5em;
+  border: solid 1px white;
+}
+.rem {
+  font-size: 1rem;
+  border: solid 1px blue;
+}
+
+/* FONT-WEIGHT */
+.min {
+  font-weight: 100;
+  font-size: 20px;
+}
+.mid {
+  font-weight: 500;
+  font-size: 20px;
+}
+.max {
+  font-weight: 900;
+  font-size: 20px;
+}
+.bold {
+  font-weight: bold;
+  font-size: 20px;
+}
+/* #endregion */
+
+/* #region 6. STYLER : TEXT (Alignement, Décoration, Transformation)*/
+/* =======================================================
+   ======================================================= */
+/* TEXT-ALIGN */
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.justify {
+  width: 100px;
+  padding: 10px;
+  text-align: justify;
+}
+.left,
+.center,
+.right,
+.justify {
+  border: solid 1px white;
+}
+
+/* TEXT-DECORATION */
+a {
+  margin-bottom: 5px;
+  color: red;
+  padding: 5px;
+  border: solid 1px blue;
+}
+.none {
+  text-decoration: none;
+}
+.underline {
+  text-decoration: underline;
+}
+
+/* TEXT-TRANSFORM */
+.expli-padTr {
+  width: 100%;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.full-width {
+  text-transform: full-width;
+}
+.full-size-kana {
+  text-transform: full-size-kana;
+}
+.math-auto {
+  text-transform: math-auto;
+}
+.uppercase,
+.capitalize,
+.lowercase,
+.full-width,
+.full-size-kana,
+.math-auto {
+  border: solid 1px white;
+}
+/* #endregion */
+
+/* #region 7. PLACER : DISPLAY (block, inline, inline-block, none)*/
+/* =======================================================
+   ======================================================= */
+.display-block {
+  display: block;
+  background-color: var(--color1); /* Red */
+  color: black;
+  padding: 5px;
+  margin-top: 5px;
+  border: solid 1px black;
+}
+.display-inline {
+  display: inline;
+  background-color: lightblue;
+  border: solid 1px black;
+  padding: 10px; /* Padding horizontal respecté, vertical ignoré */
+  width: 200px; /* Ignoré */
+  height: 50px; /* Ignoré */
+}
+.display-inline-block {
+  display: inline-block;
+  background-color: orange;
+  color: black;
+  padding: 5px;
+  margin: 5px;
+  width: 120px; /* Respecté */
+  height: 30px; /* Respecté */
+  border: solid 1px black;
+}
+.display-none {
+  display: none; /* L'élément disparaît et ne prend pas de place */
+  background-color: gray;
+  color: black;
+  padding: 10px;
+  border: solid 1px black;
+}
+/* #endregion */
+
+/* #region 8. PLACER : DISPLAY:FLEX (Conteneur & Items)*/
+/* =======================================================
+   ======================================================= */
+/* Style de base pour un item flex */
+.flex-item {
+  background-color: var(--color1);
+  border: 1px solid white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  width: 50px;
+  height: 25px;
+}
+
+.flex-container-1 {
+  display: flex;
+  flex-direction: row; /* Défaut */
+}
+.flex-container-2 {
+  display: flex;
+  flex-direction: column;
+}
+.flex-container-3a {
+  display: flex;
+  justify-content: center;
+}
+.flex-container-3b {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-container-4 {
+  display: flex;
+  align-items: center; /* Centre verticalement sur l'axe secondaire */
+}
+.flex-container-5 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 150px; /* Force le retour à la ligne */
+}
+.fond-visuF1 {
+  margin: 5px;
+  border: solid 1px blue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.test1 {
+  border: solid 1px red;
+  width: 50px;
+  height: 15px;
+  margin: 5px;
+}
+/* #endregion */
+
+/* #region 9. PLACER : DISPLAY:GRID (Conteneur & Items)*/
+/* =======================================================
+   ======================================================= */
+/* Style de base pour un item dans la grille */
+.grid-item {
+  background-color: rgba(128, 128, 128, 0.7);
+  border: 1px solid red;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.grid-container-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.grid-container-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px 10px;
+}
+.grid-item-span-col {
+  grid-column: span 2;
+  background-color: var(--color1);
+}
+.grid-container-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+.grid-item-span-row {
+  grid-row: span 2;
+  background-color: var(--color1);
+}
+/* Exemple Grid Area */
+.grid-container-areas {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 150px auto;
+  gap: 5px;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+}
+.grid-header {
+  grid-area: header;
+  background-color: darkblue;
+}
+.grid-nav {
+  grid-area: nav;
+  background-color: darkgreen;
+}
+.grid-main {
+  grid-area: main;
+  background-color: darkgrey;
+}
+.grid-aside {
+  grid-area: aside;
+  background-color: darkorange;
+}
+.grid-footer {
+  grid-area: footer;
+  background-color: darkred;
+}
+/* #endregion */
+
+/* #region 10. PLACER : POSITION & Z-INDEX*/
+/* =======================================================
+   ======================================================= */
+.position-container {
+  background-color: #f0f0f0;
+  border: 1px solid black;
+  padding: 15px;
+  height: 120px;
+  width: 90%;
+  display: flex;
+  gap: 10px;
+}
+.position-relative-parent {
+  position: relative; /* Point de référence pour l'enfant 'absolute' */
+  background-color: #e0e0e0;
+  border: 2px solid var(--color1);
+  padding: 15px;
+  height: 150px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.position-item {
+  background-color: darkgray;
+  color: white;
+  padding: 10px;
+  border: 1px solid black;
+  height: 40px;
+  width: auto;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Comportements de Positionnement */
+.static {
+  position: static;
+  background-color: #ccc;
+  color: black;
+}
+.relative {
+  position: relative;
+  top: 10px; /* Décalage */
+  background-color: orange;
+}
+.absolute {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--color1);
+}
+.fixed {
+  position: fixed;
+  bottom: 0px; /* Fixé en bas de la fenêtre */
+  right: 50px;
+  width: 100px;
+  background-color: darkgreen;
+  font-size: 12px;
+}
+/* Sticky (dans un conteneur défilant) */
+.sticky-parent {
+  height: 350px;
+  overflow-y: scroll; /* Active le défilement */
+  background-color: #e0e0e0;
+  border: 2px dashed gray;
+  flex-direction: column;
+}
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: darkgoldenrod;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Z-Index */
+.position-zindex-parent {
+  position: relative;
+  height: 120px;
+  width: 200px;
+  border: 1px solid black;
+}
+.position-zindex-item {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.zindex-back {
+  background-color: #005a9c;
+  top: 10px;
+  left: 10px;
+  z-index: 1; /* Arrière-plan */
+}
+.zindex-front {
+  background-color: #a32020;
+  top: 30px;
+  left: 30px;
+  z-index: 10; /* Premier plan */
+}
+/* #endregion */
+
+/* #region */
+ul {
+  background-color: gray;
+}
+/* #endregion */
+
+/* #region pseudo class */
+.Hover,
+.Hover1,
+.Hover2,
+.Hover3,
+.Hover4 {
+  color: black;
+  border: solid 1px black;
+}
+.Hover:hover {
+  color: red;
+}
+.Hover1:hover {
+  transform: rotate(20deg);
+}
+.Hover2:hover {
+  translate: 20px;
+}
+.Hover3:hover {
+  scale: 3;
+}
+.Hover4:hover {
+  transform: skew(30deg);
+}
+
+/**active**/
+.active,
+.active1,
+.active2,
+.active3 {
+  color: black;
+  border: solid 1px black;
+}
+.active:active {
+  color: blue;
+}
+.active1:active {
+  transform: rotate(180deg);
+}
+.active2:active {
+  translate: -20px;
+}
+.active3:active {
+  scale: 1.5;
+}
+
+/**visited**/
+#Visit:visited {
+  color: blue;
+}
+#Visit:link {
+  color: black;
+}
+#Visit:hover {
+  color: green;
+}
+#Visit:active {
+  color: purple;
+}
+
+/* #endregion test*/
+
+/* #region overflow */
+.over {
+  overflow: visible;
+}
+.over1 {
+  overflow: hidden;
+}
+.over2 {
+  overflow: scroll;
+}
+.over3 {
+  overflow: auto;
+}
+
+.over3,
+.over2,
+.over1,
+.over0,
+.over {
+  width: 200px;
+  height: 50px;
+  color: black;
+  border: solid 2px red;
+  background-color: greenyellow;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+.pover {
+  width: 50px;
+  height: 30px;
+  color: black;
+  border: solid 2px black;
+}
+.pover1 {
+  width: 100px;
+  height: 50px;
+  color: black;
+  border: solid 2px black;
+}
+.pover2 {
+  width: 400px;
+  height: 80px;
+  color: black;
+  border: solid 2px black;
+}
+/* #endregion */
+
+/* #region @media  */
+@media (max-width: 900px) {
+  body {
+    background-color: darkblue;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    background-color: yellow;
+  }
+}
+/* #endregion  */
+
+new {
+  display: flex;
+  flex-direction: column;
+}
+
+/* #region  input speech */
+
+.call-speech {
+  color: black;
+}
+/* #endregion  */
+
+/* #region writing-mode */
+.Wm1 {
+  writing-mode: horizontal-tb;
+  border-left: solid 2px black;
+  padding: 5px;
+  background-color: white;
+  color: black;
+}
+.Wm2 {
+  height: 50px;
+  /* writing-mode: vertical-rl; */
+  writing-mode: vertical-rl;
+  border-left: solid 2px black;
+  padding: 5px;
+  background-color: white;
+  color: black;
+}
+.Wm3 {
+  height: 50px;
+  writing-mode: vertical-lr;
+  border-left: solid 2px black;
+  padding: 5px;
+  background-color: white;
+  color: black;
+}
+/* #endregion test*/
+
+/* #region text-orientation */
+.to1 {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  border-left: solid 2px black;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  height: 100px;
+}
+.to2 {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  border-left: solid 2px black;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  height: 100px;
+}
+.to3 {
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  border-left: solid 2px black;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  height: 100px;
+}
+/* #endregion test*/
+
+/* #region heyframes */
+.key1 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 20px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 150px;
+    top: 50px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 70px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 20px;
+  }
+}
+
+.expli-anim {
+  font-size: 14px;
+  margin: 5px;
+  background-color: darkgreen;
+  border: gray 2px solid;
+}
+
+/* #endregion */
+
+/* #region ::backdrop */
+/* Styles de la boîte de dialogue modale */
+.fond-visuBack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #1d8ec2;
+}
+
+#monModal {
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  border: solid 5px red;
+  padding: 2em;
+  background-color: white; /* La modal elle-même a un fond blanc */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles du VOILE (backdrop) avec backdrop-filter */
+dialog::backdrop {
+  /* 1. Couleur du voile : Semi-transparent pour voir le contenu derrière */
+  background-color: rgba(0, 0, 0, 0.1);
+
+  /* 2. L'effet clef : flouter le contenu de la page qui est en dessous du voile */
+  backdrop-filter: blur(5px);
+}
+
+.Bd {
+  position: relative;
+}
+.testfiltre {
+  color: black;
+  /* 🛑 CHANGEMENT MAJEUR : Rendre le fond semi-transparent (ici blanc à 70% d'opacité) */
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  border: 1px solid red;
+
+  padding: 10px; /* Ajout d'un padding pour mieux voir l'effet */
+
+  /* ✅ Application du filtre DIRECTEMENT sur l'élément */
+  backdrop-filter: blur(10px);
+}
+
+/* .back1 ::backdrop {} */
+/* #endregion t*/
+
+/* #region transform */
+.trs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+
+.tr8,
+.tr7,
+.tr6,
+.tr5,
+.tr4,
+.tr3,
+.tr2,
+.tr1 {
+  width: 100px;
+  height: 20px;
+  border: red solid 2px;
+  margin: 10px 1px;
+  background-color: lightgrey;
+  color: black;
+}
+.tr1 {
+  transform: rotate(10deg);
+}
+.tr2 {
+  transform: scale(1.3, 0.8);
+}
+.tr3 {
+  transform: skew(30deg, 20deg);
+}
+.tr4 {
+  transform: translate(-30px, -20px);
+}
+
+.tr5 {
+  transform: translate3d(10px, 0px, 50px);
+}
+.tr6 {
+  transform: scale3d(1.6, 1.2, 0.5);
+}
+.tr7 {
+  transform: rotate3d(0, 0, 1, 30deg);
+}
+
+.expl {
+  font-size: 14px;
+  margin: 5px;
+  background-color: darkgreen;
+  border: gray 2px solid;
+}
+.parent3D {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: green solid 5px;
+
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.trp {
+  width: 250px;
+  height: auto;
+  border: solid 2px black;
+  margin: 20px;
+  background-color: blue;
+}
+/* #endregion transform*/
+
+/* #region justify-content */
+
+/* justify-items */
+.ji4,
+.ji3,
+.ji2,
+.ji1 {
+  background-color: lightcoral;
+  border: solid 2px black;
+  width: 300px;
+  height: 50px;
+  margin: 5px;
+}
+.jcx {
+  border: solid 2px gray;
+  background-color: blue;
+  margin: 5px;
+}
+
+.ji1 {
+  justify-items: start;
+}
+.ji2 {
+  justify-items: center;
+}
+.ji3 {
+  justify-items: end;
+}
+.ji4 {
+  justify-items: stretch;
+}
+
+/* align-items */
+.contx {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+.conty {
+  display: flex;
+  flex-direction: column;
+}
+
+.Ai1,
+.Ai2,
+.Ai3,
+.Ai4 {
+  background-color: lightcoral;
+  border: solid 2px black;
+  width: 200px;
+  height: 100px;
+  margin: 5px;
+  display: flex;
+}
+
+.jcxx {
+  display: flex;
+  border: solid 2px gray;
+  background-color: blue;
+  margin: 5px;
+  width: 75px;
+}
+.Ai1 {
+  align-items: start;
+}
+.Ai2 {
+  align-items: center;
+}
+.Ai3 {
+  align-items: end;
+}
+.Ai4 {
+  align-items: stretch;
+}
+
+/* justify-content */
+.jc6,
+.jc5,
+.jc4,
+.jc3,
+.jc2,
+.jc1 {
+  background-color: lightcoral;
+  border: solid 2px black;
+  width: 300px;
+  height: 50px;
+  margin: 1px;
+  display: flex;
+}
+.jcx {
+  border: solid 2px gray;
+  background-color: blue;
+  margin: 1px;
+}
+
+.jc1 {
+  justify-content: start;
+}
+.jc2 {
+  justify-content: center;
+}
+.jc3 {
+  justify-content: end;
+}
+.jc4 {
+  justify-content: space-between;
+}
+.jc5 {
+  justify-content: space-around;
+}
+.jc6 {
+  justify-content: space-evenly;
+}
+
+.ac {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* align-content  */
+.ac7,
+.ac6,
+.ac5,
+.ac4,
+.ac3,
+.ac2,
+.ac1 {
+  background-color: lightcoral;
+  border: solid 2px black;
+  width: 100px;
+  height: 100px;
+  margin: 1px;
+}
+
+.jcx2 {
+  border: solid 2px gray;
+  background-color: blue;
+  margin: 1px;
+  width: 75px;
+}
+
+.jcx3 {
+  border: solid 2px gray;
+  background-color: blue;
+  margin: 1px;
+  width: 75px;
+}
+
+.ac1 {
+  align-content: start;
+}
+.ac2 {
+  align-content: center;
+}
+.ac3 {
+  align-content: end;
+}
+.ac4 {
+  align-content: stretch;
+}
+
+/* #endregion justify-content*/
+
+/* #region box-shadow */
+.bs {
+  box-shadow: -10px -10px 5px 0px rgba(255, 0, 0, 0.611),
+    10px 10px 5px 0px rgba(0, 0, 255, 0.5);
+}
+/* #endregion box-shadow*/
+
+/* #region storke */
+/* Définition de l'animation */
+
+svg {
+  width: 200;
+  height: 200;
+  viewbox: 0 0 100 100;
+}
+
+@keyframes dessine {
+  to {
+    stroke-dashoffset: 0; /* Le tracé se révèle entièrement à la fin */
+  }
+}
+
+/* Styles du Tracé SVG */
+.tracé-anime {
+  fill: none; /* Pas de couleur de remplissage */
+  stroke: #ff5733; /* Couleur de la ligne : Rouge-Orange */
+  stroke-width: 3; /* Épaisseur de la ligne */
+
+  /* Paramètres d'animation */
+  /* 1. Définit le motif de tirets. La valeur 280 (longueur) et 280 (espace) signifie un seul tiret de 280 unités. */
+  stroke-dasharray: 280;
+
+  /* 2. Décale le tiret masqué par sa propre longueur, donc rien n'est visible au départ (0%) */
+  stroke-dashoffset: 280;
+
+  /* 3. Application de l'animation */
+  animation: dessine 3s ease-in-out forwards;
+}
+/* #endregion test*/
+
+/* #region font-style*/
+.fs1 {
+  font-style: normal;
+  border: solid 1px black;
+  color: black;
+}
+.fs2 {
+  font-style: italic;
+  border: solid 1px black;
+  color: black;
+}
+#fs3 {
+  font-style: oblique;
+  border: solid 1px black;
+  color: black;
+}
+
+/* #endregion font-style*/
+
+/* #region selecteur css */
+#select {
+  appearance: none;
+  border: solid 1px black;
+  margin: 5px;
+  background-color: lightgray;
+  color: black;
+  text-align: start;
+}
+/* #endregion */
+
+/* #region variables/ fonction */
+
+.var4,
+.var3,
+.var2,
+.var1 {
+  background-color: black;
+  margin: 1px;
+  text-align: start;
+}
+
+.var0 {
+  color: black;
+}
+.var5 {
+  height: 100px;
+  width: 500px;
+  background: red;
+  border: dotted 2px blue;
+  clip-path: polygon(0% 100%, 100% 50%, 100% 0%, 0% 0%);
+  color: black;
+}
+
+.var6 {
+  background: red;
+  border: dotted 2px blue;
+  height: 200px;
+  width: 200px;
+  clip-path: polygon(
+    0px 0px,
+    100px 50px,
+    200px 0px,
+    150px 100px,
+    200px 200px,
+    100px 150px,
+    0px 200px,
+    50px 100px
+  );
+  color: black;
+}
+.Horizon {
+  display: flex;
+  flex-direction: row;
+}
+
+.pose {
+  display: flex;
+  justify-content: space-evenly;
+}
+.var73,
+.var72,
+.var71,
+.var7 {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.var7 {
+  background: red;
+  border: dotted 2px blue;
+  clip-path: circle(100%);
+}
+.var71 {
+  background: red;
+  border: dotted 2px blue;
+  clip-path: circle(50%);
+  color: black;
+}
+.var72 {
+  background: red;
+  border: dotted 2px blue;
+  clip-path: circle(25%);
+  color: black;
+}
+.var73 {
+  background: red;
+  border: dotted 2px blue;
+  clip-path: circle(10%);
+  color: black;
+}
+
+.var8 {
+  height: 100px;
+  width: 100px;
+  background: red;
+  border: dotted 2px blue;
+  clip-path: ellipse(50% 30% at 50% 25%);
+  color: black;
+}
+.var90 {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  color: red;
+}
+.var9 {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background: red;
+  border: dotted 2px blue;
+  color: black;
+  clip-path: inset(0% 20% 10% 0%);
+}
+
+.var10 {
+  height: 100px;
+  width: 100px;
+  background: red;
+  border: dotted 2px blue;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  color: black;
+}
+
+/* #endregion variables/ fonction*/
+
+/* #region taille */
+.taille0 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 400px;
+  border: solid 1px yellow;
+}
+
+.taille6,
+.taille5,
+.taille4,
+.taille3,
+.taille2,
+.taille1 {
+  width: 100px;
+  height: 100px;
+  border: solid 1px black;
+  background-color: lightgray;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.taille1 {
+  font-size: 16px;
+}
+.taille2 {
+  font-size: 1em;
+}
+.taille3 {
+  font-size: 1rem;
+}
+.taille4 {
+  font-size: 100%;
+}
+.taille5 {
+  font-size: 2vh;
+}
+.taille6 {
+  font-size: 1vw;
+}
+
+/* #endregion taille*/
+
+/* #region pseudo classe */
+.pseudo00,
+.pseudo51,
+.pseudo5,
+.pseudo41,
+.pseudo4,
+.pseudo31,
+.pseudo3,
+.pseudo21,
+.pseudo2,
+.pseudo11,
+.pseudo1,
+.pseudo01,
+.pseudo0 {
+  color: black;
+}
+
+.pseudo0:hover::before {
+  content: "debut-: ";
+  color: red;
+}
+.pseudo1::after {
+  content: " - Fin.";
+  color: green;
+}
+.pseudo2::first-letter {
+  color: green;
+  font-size: 2em;
+}
+.pseudo3::first-line {
+  color: purple;
+}
+.pseudo4::selection {
+  color: red;
+  background-color: yellow;
+}
+.pseudo5:hover::before {
+  content: "🌟";
+}
+.pseudo5:hover::after {
+  content: "🌟";
+}
+
+/* #endregion pseudo classe*/
+
+/* #region image */
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+.sp {
+  width: 200px;
+  height: auto;
+  border: solid 1px black;
+  background-color: lightgray;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  font-size: 15px;
+}
+
+.im {
+  width: 200px;
+  height: 400px;
+  border: dotted 5px purple;
+  position: relative;
+}
+.imgP {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pos {
+  width: 200px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  translate: -25% -50%;
+  z-index: 10;
+}
+.image10,
+.image9,
+.image8,
+.image7,
+.image6,
+.image5,
+.image4,
+.image3,
+.image2,
+.image1,
+.image0 {
+  width: 200px;
+  height: 400px;
+  border: solid 2px black;
+}
+.image0 {
+  /* niveaux de gris. */
+  filter: grayscale(150%);
+  /* Remplir en Rognant */
+  object-fit: cover;
+  /* place l element en x y  */
+  object-position: center center;
+  object-position: 50% 50%;
+  object-position: 20% 10%;
+}
+.image1 {
+  /* tons sépia */
+  filter: sepia(100%);
+  /* Tout Afficher avec Bandes */
+  object-fit: contain;
+}
+.image2 {
+  /* luminosité. */
+  filter: brightness(500%);
+  /* Remplir en Déformant */
+  object-fit: fill;
+}
+.image3 {
+  /* flou gaussien */
+  filter: blur(10px);
+  /* donne la plus petite taille de rendu au final. */
+  object-fit: scale-down;
+}
+.image4 {
+  filter: contrast(300%);
+  /* sa résolution originale en pixels */
+  object-fit: none;
+}
+.image5 {
+  object-fit: contain;
+  /* rotation de teinte (changement de couleurs) */
+  filter: hue-rotate(200deg);
+}
+.image6 {
+  object-fit: contain;
+  /* Inverse les couleurs */
+  filter: invert(100%);
+}
+.image7 {
+  object-fit: contain;
+  /* saturation */
+  filter: saturate(500%);
+}
+.image8 {
+  object-fit: contain;
+  /* ombre portée 
+   filter: drop-shadow(x y force couleur); */
+  filter: drop-shadow(30px 20px 5px rgb(218, 9, 9));
+}
+.image9 {
+  object-fit: contain;
+  /* transparence */
+  filter: opacity(30%);
+}
+
+/* #endregion test*/
+
+/* #region video */
+video {
+  width: 300px;
+  height: 100px;
+  border: solid 2px red;
+}
+/* #endregion test*/
+
+/* #region video*/
+.vid {
+  width: 100%;
+  height: auto;
+  border: solid 2px blue;
+  color: black;
+  text-align: start;
+}
+/* #endregion */
+
+/* #region test */
+/* Définition du contexte pour les exemples */
+/* CONTEXTE VISUEL */
+.fond-fusion {
+  /* Le fond avec lequel les blocs vont se mélanger */
+  background: linear-gradient(to right, #ff8c00, #4169e1); /* Orange à Bleu */
+  padding: 20px;
+}
+
+/* BASE DU BLOC D'EXEMPLE (remplace .tr1, .tr2, etc.) */
+.mode-bloc {
+  width: 250px;
+  margin: 10px auto;
+  padding: 5px;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  /* Couleur et Texte de l'élément superposé */
+  background-color: black;
+  color: cyan;
+  text-align: center;
+}
+
+.mode-explication {
+  /* Styles pour la description à l'intérieur du bloc */
+  font-size: 14px;
+  margin-top: 5px;
+  color: white;
+}
+
+/* MODES DE FUSION APPLIQUÉS */
+
+.mode-multiply {
+  background-color: #ff00ff; /* Magenta */
+  mix-blend-mode: multiply;
+  color: black;
+}
+
+.mode-screen {
+  background-color: #00ffff; /* Cyan */
+  mix-blend-mode: screen;
+  color: black;
+}
+
+.mode-overlay {
+  background-color: #ffff00; /* Jaune */
+  mix-blend-mode: overlay;
+  color: black;
+}
+
+.mode-hue {
+  background-color: red;
+  mix-blend-mode: hue;
+  color: black;
+}
+
+.mode-color {
+  background-color: green;
+  mix-blend-mode: color;
+  color: black;
+}
+
+.mode-luminosity {
+  background-color: rgb(0, 4, 255);
+  mix-blend-mode: luminosity;
+  color: black;
+}
+/* #endregion test*/
+
+/* #region video */
+/* BASE DU BLOC D'EXEMPLE (Conteneur) */
+.video-wrapper {
+  /* Définit la taille du conteneur visible */
+  width: 300px;
+  height: 180px;
+  margin: 20px auto;
+  background-color: #2e86c1; /* Bleu pour le fond */
+  overflow: hidden;
+}
+
+/* L'élément vidéo lui-même */
+.clipped-video {
+  /* Assure que la vidéo remplit la zone du conteneur */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Important pour éviter la déformation */
+
+  /* Active les transitions pour les effets d'animation de clip-path */
+  transition: clip-path 0.5s ease-in-out;
+}
+
+/* APPLICATIONS SPÉCIFIQUES */
+
+.mode-circle-video .clipped-video {
+  /* Découpe le flux vidéo en cercle */
+  clip-path: circle(50% at 50% 50%);
+}
+
+.mode-polygon-video .clipped-video {
+  /* Découpe le flux vidéo en hexagone */
+  clip-path: polygon(50% 0%, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
+}
+
+/* Exemple d'effet de survol (animation) */
+.mode-circle-video .clipped-video:hover {
+  /* Le cercle s'agrandit au survol */
+  clip-path: circle(75% at 50% 50%);
+}
+/* #endregion test*/
+
+/* #region input */
+/* CONTEXTE VISUEL (pour séparer les blocs) */
+.fond-input {
+  padding: 15px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  color: black;
+}
+input {
+  color: black;
+}
+
+/* BASE DU BLOC D'EXEMPLE */
+.mode-bloc {
+  width: 90%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Styles pour les balises INPUT à l'intérieur des blocs */
+.mode-bloc input[type] {
+  display: block;
+  margin: 5px 0 10px 0;
+  padding: 8px;
+  border: 1px solid #aaa;
+  width: 100%;
+  box-sizing: border-box; /* Inclusion du padding dans la largeur */
+}
+
+/* Ajustement pour les boutons radio et checkbox */
+.mode-bloc input[type="checkbox"],
+.mode-bloc input[type="radio"] {
+  display: inline-block;
+  width: auto;
+  margin-right: 5px;
+}
+
+/* Styles du code et des explications */
+.mode-bloc code {
+  display: block;
+  margin-bottom: 5px;
+  color: #c7254e;
+  font-weight: bold;
+}
+.mode-explication {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+/* #endregion test*/
+
+/* #region liste */
+/* CONTEXTE VISUEL (pour les blocs) */
+.fond-liste {
+  padding: 15px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+}
+
+li,
+dt,
+dd {
+  color: rgb(86, 86, 92); /* Assure que le texte est lisible */
+}
+
+/* BASE DU BLOC D'EXEMPLE */
+.mode-bloc {
+  width: 90%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: left; /* Assure que les listes ne sont pas centrées */
+}
+
+/* Styles pour les listes */
+.mode-bloc ul,
+.mode-bloc ol,
+.mode-bloc dl {
+  padding-left: 25px;
+  margin: 10px 0;
+}
+
+.mode-bloc li {
+  margin-bottom: 5px;
+}
+
+/* Styles pour les listes de description */
+.mode-bloc dt {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #007bff; /* Bleu pour mettre en évidence le terme */
+}
+.mode-bloc dd {
+  margin-left: 20px;
+}
+/* #endregion test*/
+
+/* #region array */
+/* CONTEXTE VISUEL (pour les blocs) */
+.fond-visu {
+  padding: 15px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+}
+
+/* BASE DU BLOC D'EXEMPLE */
+.mode-bloc {
+  width: 90%;
+  max-width: 450px;
+  margin: 10px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* Styles pour le code (la balise <pre>) */
+.mode-bloc pre {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto; /* Pour gérer le débordement horizontal */
+  color: #333;
+  font-size: 14px;
+}
+
+.mode-bloc code {
+  display: block;
+  margin-bottom: 5px;
+  color: #c7254e;
+  font-weight: bold;
+}
+.mode-explication {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+/* #endregion test*/
+
+/* #region inframe */
+/* CONTEXTE VISUEL */
+.fond-visu {
+  padding: 15px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+}
+
+/* BASE DU BLOC D'EXEMPLE */
+.mode-bloc {
+  width: 90%;
+  max-width: 450px;
+  margin: 10px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* Style de l'iframe pour la démo */
+.mode-bloc iframe {
+  border: 2px solid #007bff;
+  width: 100%;
+  height: 100px; /* Taille réduite pour l'exemple */
+  display: block;
+  margin-top: 10px;
+}
+/* #endregion test*/
+
+/* #region nav */
+/* CONTEXTE VISUEL */
+.fond-visu {
+  padding: 15px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+}
+
+/* BASE DU BLOC D'EXEMPLE */
+.mode-bloc {
+  width: 90%;
+  max-width: 450px;
+  margin: 10px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* Style de base pour les liens dans les blocs (pour la démo) */
+.mode-bloc a {
+  color: #007bff;
+  text-decoration: underline;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+/* Styles pour le code dans <pre> et <code> */
+.mode-bloc pre {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  color: #333;
+  font-size: 14px;
+}
+.mode-bloc code {
+  display: block;
+  margin-bottom: 5px;
+  color: #c7254e;
+  font-weight: bold;
+}
+/* #endregion test*/
+
+/* #region formulaire*/
+/* CONTEXTE VISUEL */
+.fond-visu {
+  padding: 15px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+}
+
+/* BASE DU BLOC D'EXEMPLE */
+.mode-bloc {
+  width: 90%;
+  max-width: 450px;
+  margin: 10px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* Styles pour le code dans <pre> et <code> */
+.mode-bloc pre {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  color: #333;
+  font-size: 14px;
+}
+.mode-bloc code {
+  display: block;
+  margin-bottom: 5px;
+  color: #c7254e;
+  font-weight: bold;
+}
+.mode-explication {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+/* #endregion test*/
+
+/* #region input 2.0 */
+
+/* #endregion test*/
+
+/* #region textarea */
+textarea {
+  color: black;
+}
+/* #endregion test*/
+
+/* #region audio */
+audio {
+  width: 500px;
+  height: 50px;
+  border: solid 2px red;
+}
+/* #endregion test*/
+
+/* #region hx*/
+h6 {
+  display: flex;
+  justify-content: center;
+}
+.fond-h {
+  background-color: rgb(173, 10, 10);
+}
+mark {
+  background-color: yellow;
+  color: black;
+}
+li {
+  color: black;
+  border: solid 1px black;
+}
+
+:root {
+  --main-color: white;
+  --secondary-color: lightgreen;
+  --border-color: gray;
+}
+caption {
+  background-color: lightseagreen;
+  color: black;
+}
+table {
+  padding: 10px;
+  background-color: orange;
+}
+th {
+  text-align: center;
+  background-color: purple;
+  color: white;
+}
+td {
+  text-align: center;
+  color: black;
+  border: solid 2px black;
+}
+tr {
+  background-color: skyblue;
+}
+
+/* #endregion test*/
+
+/* #region pointer */
+.point1 {
+  color: black;
+  margin: 5px 0;
+  text-align: center;
+}
+.gap {
+  gap: 10px;
+}
+.pointex {
+  border: solid 2px black;
+  width: 80px;
+  height: 30px;
+}
+
+.defaut {
+  cursor: default;
+}
+.pointer {
+  cursor: pointer;
+}
+.crosshair {
+  cursor: crosshair;
+}
+.text {
+  cursor: text;
+}
+.move {
+  cursor: move;
+}
+.wait {
+  cursor: wait;
+}
+.help {
+  cursor: help;
+}
+.zoom-in {
+  cursor: zoom-in;
+}
+.zoom-out {
+  cursor: zoom-out;
+}
+.grab {
+  cursor: grab;
+}
+.grabbing {
+  cursor: grabbing;
+}
+
+
+.custom-button {
+  width: 400px;
+  height: 200px;
+  padding: 1px 3px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+
+  /* DÉCLARATION DU CURSEUR PERSONNALISÉ */
+  cursor: url("rocket-redimensionne-taille-30x30.jpeg") 5 10,
+    /* 1. Tentative principale (URL) */ pointer; /* 2. Valeur de secours (pointer) */
+}
+
+/* #endregion pointer*/
+
+/* #region test */
+.forma {
+width: 90%;
+flex-wrap: wrap;
+}
+.forma > code {
+  border: solid 2px red;
+  color: yellow;
+  
+}
+/* #endregion test*/
+
+/* #region test */
+
+/* #endregion test*/

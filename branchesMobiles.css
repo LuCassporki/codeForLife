@@ -1,0 +1,22 @@
+#languages {
+  border: solid 1px blue;
+  width: auto;
+  position: relative;
+  top: 50%;
+  left: 50%;
+
+  translate: -0% -0%;
+  transform: rotate(-0deg);
+}
+
+#pts-css {
+  width: auto;
+  height: 150px;
+  border: solid 5px red;
+  position: absolute;
+  top: 50%;
+  left: 1%;
+
+  translate: -50% -50%;
+  transform: rotate(-20deg);
+}

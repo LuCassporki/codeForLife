@@ -1,0 +1,42 @@
+/* #region list */
+#list {
+  width: auto;
+  height: auto;
+  border: solid 2px green;
+  background-color: black;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 55px;
+  height: 40px;
+
+  translate: -0% -0%;
+  transform: rotate(-0deg);
+  z-index: 10;
+}
+#list:hover {
+  background-color: lightslategray;
+  cursor: grab;
+  width: auto;
+  height: auto;
+}
+ol {
+  border: solid 5px red;
+  width: auto;
+  height: auto;
+  margin: 5px;
+  padding: 10px;
+}
+.a-voir {
+  border: solid 2px orange;
+}
+.fait {
+  border: solid 1px green;
+}
+
+.note {
+  color: yellow;
+  font-size: 0.8em;
+  font-style: italic;
+}
+/*#endregion list */
