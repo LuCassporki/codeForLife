@@ -1,118 +1,140 @@
+body {
+  background-color: black;
+  width: 100vw;
+  height: auto;
+  padding: 30px;
+  border: 5px double gray;
+  border: solid 1px red;
+}
+h3,
+h2,
+h1 {
+  background-color: transparent;
+ 
+}
+h1{
+  color: green;
+}
+h2{
+  color: blue;
+}
+h3{
+  color: red;
+}
+
+:root {
+  --yPosition1: 0%;
+  --XPosition: 0%;
+  --zindex-repere: 10;
+}
+
+/* #region repere css */
+/* X */
+#pts-css1,
+#pts-css2 {
+  position: absolute;
+  top: var(--yPosition1);
+  left: var(--XPosition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: solid 5px white;
+  font-size: 1.5rem;
+}
+
+#pts-css3,
+#pts-css4,
+#pts-css5,
+#pts-css6,
+#pts-css7,
+#pts-css8,
+#pts-css9,
+#pts-css10 {
+  position: absolute;
+  top: var(--yPosition1);
+  left: var(--XPosition);
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  color: orange;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0);
+}
+/* #endregion */
+
 /* #region repere css */
 /* X */
 #pts-css1 {
   width: 100%;
   height: 0px;
-  border: solid 1px white;
-  position: absolute;
-  top: var(--yPosition1);
-  left: 0%;
-  z-index: -1;
+  z-index: var(--zindex-repere);
 }
 /* Y */
 #pts-css2 {
   width: 0px;
   height: 100%;
-  border: solid 1px white;
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  z-index: -1;
+  z-index: var(--zindex-repere);
 }
-/* 50px */
+/* petit mobil */
 #pts-css3 {
-  width: 50px;
-  height: 50px;
-  border: solid 1px white;
-  position: absolute;
-  top: var(--yPosition1);
-  left: 50%;
-  z-index: -1;
-  translate: -50% -50%;
+  width: 320px;
+  height: 568px;
+  border: solid 5px red;
+  z-index: var(--zindex-repere);
 }
-/* 100px */
+/* standar mobil */
 #pts-css4 {
-  width: 100px;
-  height: 100px;
-  border: solid 1px white;
-  position: absolute;
-  top: var(--yPosition1);
-  left: 50%;
-  z-index: -1;
-  translate: -50% -50%;
+  width: 375px;
+  height: 627px;
+  border: solid 5px red;
+  z-index: var(--zindex-repere);
 }
-/*200px */
+/* grand mobil */
 #pts-css5 {
-  width: 200px;
-  height: 200px;
-  border: solid 1px white;
-  position: absolute;
-  top: var(--yPosition1);
-  left: 50%;
-  z-index: -1;
-  translate: -50% -50%;
-}
-/* 300px */
-#pts-css6 {
-  width: 300px;
-  height: 300px;
-  border: solid 1px white;
-  position: absolute;
-  top: var(--yPosition1);
-  left: 50%;
-  z-index: -1;
-  translate: -50% -50%;
+  width: 414px;
+  height: 736px;
+  border: solid 5px red;
+  z-index: var(--zindex-repere);
 }
 
-/* 500px */
+/* tablette stadard */
+#pts-css6 {
+  width: 768px;
+  height: 1024px;
+  border: solid 10px blue;
+  z-index: var(--zindex-repere);
+}
+
+/* tablette grande */
 #pts-css7 {
-  width: 500px;
-  height: 500px;
-  border: solid 1px white;
-  position: absolute;
-  top: var(--yPosition1);
-  left: 50%;
-  z-index: -1;
-  translate: -50% -50%;
+  width: 820px;
+  height: 1180px;
+  border: solid 10px blue;
+  z-index: var(--zindex-repere);
 }
-/* 800px */
+
+
+/* petit ecran */
 #pts-css8 {
-  display: flex;
-  align-items: center;
-  width: 800px;
-  height: 800px;
-  border: solid 1px white;
-  position: absolute;
-  top: var(--yPosition1);
-  left: 50%;
-  z-index: -1;
-  translate: -50% -50%;
+  width: 992px;
+  height: 600px;
+  border: solid 12px green;
+  z-index: var(--zindex-repere);
 }
-/* 1000px */
+/* ecran standar */
 #pts-css9 {
-  display: flex;
-  align-items: center;
-  width: 1000px;
-  height: 1000px;
-  border: solid 1px white;
-  position: absolute;
-  top: var(--yPosition1);
-  left: 50%;
-  z-index: -1;
-  translate: -50% -50%;
+  width: 1440px;
+  height: 900px;
+  border: solid 12px green;
+  z-index: var(--zindex-repere);
 }
-/* 1200px */
+/* hdmi */
 #pts-css10 {
-  display: flex;
-  align-items: center;
-  width: 1200px;
-  height: 1200px;
-  border: solid 1px white;
-  position: absolute;
-  top: var(--yPosition1);
-  left: 50%;
-  z-index: -1;
-  translate: -50% -50%;
+  width: 1920px;
+  height: 1080px;
+  border: solid 12px green;
+  z-index: var(--zindex-repere);
 }
 /* #endregion */
 

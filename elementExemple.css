@@ -988,20 +988,6 @@ ul {
 }
 /* #endregion */
 
-/* #region @media  */
-@media (max-width: 900px) {
-  body {
-    background-color: darkblue;
-  }
-}
-
-@media (orientation: portrait) {
-  body {
-    background-color: yellow;
-  }
-}
-/* #endregion  */
-
 new {
   display: flex;
   flex-direction: column;
@@ -2330,7 +2316,7 @@ tr {
 
   /* DÉCLARATION DU CURSEUR PERSONNALISÉ */
   cursor: url("rocket-redimensionne-taille-30x30.jpeg") 5 10,
-    /* 1. Tentative principale (URL) */ pointer; /* 2. Valeur de secours (pointer) */
+    /* 1. Tentative principale (URL) */ pointer /* 2. Valeur de secours (pointer) */
 }
 
 /* #endregion pointer*/
