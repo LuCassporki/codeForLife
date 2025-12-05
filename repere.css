@@ -37,24 +37,24 @@ span {
   color: red;
 }
 .s2 {
-  left: 250px;
+  left: 200px;
   color: blue;
 }
 .s3 {
-  left: 480px;
+  left: 500px;
   color: green;
 }
 .s4 {
   left: 840px;
-  color: orange;
+  color: green;
 }
 .s5 {
   left: 380px;
-  color: yellow;
+  color: green;
 }
 .s6 {
   left: 1900px;
-  color: purple;
+  color: green;
 } 
 .s7 {
   left: 1400px;
@@ -65,7 +65,7 @@ span {
   color: cyan;
 }
 .s9 {
-  left: 1860px;
+  left: 1700px;
   color: red;
 }
 
