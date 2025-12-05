@@ -29,7 +29,7 @@ span {
   border: solid 1px white;
 }
 .s0 {
-  left: 50px;
+  left: 300px;
   color: white;
 }
 .s1 {
@@ -41,11 +41,11 @@ span {
   color: blue;
 }
 .s3 {
-  left: 500px;
+  left: 480px;
   color: green;
 }
 .s4 {
-  left: 800px;
+  left: 840px;
   color: orange;
 }
 .s5 {
@@ -53,7 +53,7 @@ span {
   color: yellow;
 }
 .s6 {
-  left: 1200px;
+  left: 1900px;
   color: purple;
 } 
 .s7 {
@@ -65,7 +65,7 @@ span {
   color: cyan;
 }
 .s9 {
-  left: 1850px;
+  left: 1860px;
   color: red;
 }
 
