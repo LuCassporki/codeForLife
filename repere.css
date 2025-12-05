@@ -1,10 +1,8 @@
 body {
   background-color: black;
-  width: 100vw;
+  /* width: 100vw; */
   height: auto;
-  padding: 30px;
   border: 5px double gray;
-  border: solid 1px red;
 }
 h3,
 h2,
@@ -21,6 +19,58 @@ h2{
 h3{
   color: red;
 }
+span {
+  position: absolute;
+  top: 10%;
+  translate:-50% 0%;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  border: solid 1px white;
+}
+.s0 {
+  left: 50px;
+  color: white;
+}
+.s1 {
+  left: 100px;
+  color: red;
+}
+.s2 {
+  left: 250px;
+  color: blue;
+}
+.s3 {
+  left: 500px;
+  color: green;
+}
+.s4 {
+  left: 800px;
+  color: orange;
+}
+.s5 {
+  left: 380px;
+  color: yellow;
+}
+.s6 {
+  left: 1200px;
+  color: purple;
+} 
+.s7 {
+  left: 1400px;
+  color: pink;
+}
+.s8 {
+  left: 1920px;
+  color: cyan;
+}
+.s9 {
+  left: 1850px;
+  color: red;
+}
+
+
+
 
 :root {
   --yPosition1: 0%;
@@ -50,7 +100,8 @@ h3{
 #pts-css7,
 #pts-css8,
 #pts-css9,
-#pts-css10 {
+#pts-css10,
+#pts-css11 {
   position: absolute;
   top: var(--yPosition1);
   left: var(--XPosition);
@@ -124,16 +175,22 @@ h3{
 }
 /* ecran standar */
 #pts-css9 {
+  width: 1200px;
+  height: 1080px;
+  border: solid 12px green;
+  z-index: var(--zindex-repere);
+}
+#pts-css10 {
   width: 1440px;
   height: 900px;
   border: solid 12px green;
   z-index: var(--zindex-repere);
 }
 /* hdmi */
-#pts-css10 {
+#pts-css11 {
   width: 1920px;
   height: 1080px;
-  border: solid 12px green;
+  border: solid 20px green;
   z-index: var(--zindex-repere);
 }
 /* #endregion */
