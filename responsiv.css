@@ -1,14 +1,15 @@
 
 /* #region @media  */
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   body {
-    background-color: red;
+    width: 840px;
+    border: solid 10px green;
   }
 }
-
-@media (orientation: portrait) {
+@media (max-width: 500px) {
   body {
-    background-color: blue;
+    width: 380px;
+    border: solid 10px purple;
   }
 }
 /* #endregion  */
