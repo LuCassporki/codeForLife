@@ -20,8 +20,10 @@ h3{
   color: red;
 }
 span {
+  width: 200px;
   position: absolute;
-  top: 10%;
+  top: 1%;
+  
   translate:-50% 0%;
   color: white;
   font-size: 2rem;
@@ -41,28 +43,32 @@ span {
   color: blue;
 }
 .s3 {
-  left: 500px;
+  left: 490px;
   color: green;
+  top: 10%;
 }
 .s4 {
   left: 840px;
   color: green;
+  top: 10%;
 }
 .s5 {
   left: 380px;
   color: green;
+  top: 10%;
 }
 .s6 {
   left: 1900px;
   color: green;
+  top: 10%;
 } 
 .s7 {
   left: 1400px;
   color: pink;
 }
 .s8 {
-  left: 1920px;
-  color: cyan;
+  left: 1860px;
+  color: green;
 }
 .s9 {
   left: 1700px;
