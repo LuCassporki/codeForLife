@@ -11,5 +11,25 @@
     width: 380px;
     border: solid 10px purple;
   }
+
+.contentH,
+.branchH {
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+h3 {
+  color: yellow;
+  padding: 2px 4px;
+  margin: 0;
+  border: solid 1px black;
+  width: auto;
+  transform: rotate(0deg);
+  writing-mode: horizontal-tb;
+  text-align: start;
+}
+
 }
 /* #endregion  */

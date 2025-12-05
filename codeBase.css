@@ -6,7 +6,6 @@
   color: white;
 }
 
-
 body {
   background-color: black;
   height: auto;
@@ -32,17 +31,31 @@ code {
   border: solid 1px black;
 }
 
-h1,
-h2,
-h3,
 h4,
-h5 {
+h5,
+h1,
+h2 {
   color: yellow;
   padding: 2px 4px;
   margin: 0;
   border: solid 1px black;
   width: auto;
   text-align: center;
+}
+h3 {
+  color: yellow;
+  padding: 2px 4px;
+  margin: 0;
+  border: solid 1px black;
+  width: auto;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  text-align: end;
+}
+h3:active {
+  transform: rotate(0deg);
+  writing-mode: horizontal-tb;
+  text-align: start;
 }
 
 h1 {
