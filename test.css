@@ -1,7 +1,24 @@
 * {
-  margin: 10px 50px 0px 30px;
-  border: solid red 1px;
+  margin: 0;
+  border: outset 5px rgb(78, 3, 3);
+  font-size: 1.5rem;
 }
 body {
-  width: 990px;
+  margin: auto;
+  width: 95vw;
+  height: 300vh;
+
+  border: solid 5px yellow;
+  background-color: rgb(12, 0, 61);
+}
+
+div#jsScript {
+  margin: auto;
+  width: 90vW;
+  height: 100%;
+  margin: auto;
+  border: solid 5px red;
+  background-color: rgb(61, 0, 12);
+  font-size: 24px;
+  color: white;
 }
