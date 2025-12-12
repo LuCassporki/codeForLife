@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="php.css" />
+        <title>PHP</title>
+    </head>
+
+    <body>
+        <h1>PHP</h1>
+        <h4>affichage</h4>
+        <ul>
+            <li>difference entre echo et print:
+                <ul>
+                    <li>echo peut prendre plusieurs paramètres (bien que cela
+                        soit rare)</li>
+                    <li>print ne peut prendre qu'un seul argument et retourne
+                        toujours 1</li>
+                    <li>echo est légèrement plus rapide que print</li>
+                </ul>
+            </li>
+
+            <li>echo</li>
+            <pre><code>&lt;?php
+    echo "Bonjour le monde!";
+    echo "\n"; <span>pour sauter une ligne</span>
+    ?&gt;</code></pre>
+
+            <li>print</li>
+            <pre><code>&lt;?php
+    print "Bonjour le monde!";
+    print "\n"; <span>pour sauter une ligne</span>
+    ?&gt;</code></pre>
+
+        </ul>
+
+        <h4>Chaînes de caractères</h4>
+        <ul>
+            <code>
+                <li>
+                    strlen()
+                    <span>
+                        Longueur d’une chaîne.
+                    </span>
+                </li>
+                <li>
+                    strtoupper() / strtolower()
+                    <span>
+                        Met en majuscules / minuscules.
+                    </span>
+                </li>
+                <li>
+                    ucfirst() / ucwords()
+                    <span>
+                        Met la première lettre en majuscule.
+                    </span>
+                </li>
+                <li>
+                    str_replace()
+                    <span>
+                        Remplace un mot par un autre.
+                    </span>
+                </li>
+                <li>
+                    substr()
+                    <span>
+                        Extrait une sous-chaîne.
+                    </span>
+                </li>
+                <li>
+                    strpos()
+                    <span>
+                        Cherche la position d’un mot dans une chaîne.
+                    </span>
+                </li>
+                <li>
+                    trim()
+                    <span>
+                        Supprime les espaces en début/fin.
+                    </span>
+                </li>
+                <li>
+                    explode()
+                    <span>
+                        Découpe une chaîne avec un séparateur.
+                    </span>
+                </li>
+                <li>
+                    implode()
+                    <span>
+                        Joint un tableau avec un séparateur.
+                    </span>
+                </li>
+                <li>exemples:
+                    <pre><code>&lt;?php
+    $texte = " Bonjour le monde! ";
+    echo strlen($texte);  // affiche 18
+    echo strtoupper($texte);  // affiche " BONJOUR LE MONDE! "
+    echo trim($texte);  // affiche "Bonjour le monde!"
+    ?&gt;</code></pre>
+
+                </li>
+            </code>
+        </ul>
+
+        <h4>variables</h4>
+        <ul>
+            <li>Commencent toujours par $</li>
+            <li>Peuvent contenir des lettres, chiffres et _</li>
+            <li>Ne peuvent pas commencer par un chiffre</li>
+            <li>Sensibles à la casse ($Nom et $nom sont différents)</li>
+            <li>exemples:
+                <pre><code>&lt;?php
+$nom = "Alice";
+$age = 30;
+echo "Nom: " . $nom . ", Âge: " . $age;
+?&gt;</code></pre>
+
+            </li>
+        </ul>
+
+        <h4>elements</h4>
+        <ul>
+            <li>array (tableau)
+                <ul>
+                    <code>
+                        <li>
+                            count()
+                            <span>
+                                Retourne le nombre d’éléments.
+                            </span>
+                        </li>
+                        <li>
+                            in_array()
+                            <span>
+                                Vérifie si une valeur existe dans un tableau.
+                            </span>
+                        </li>
+                        <li>
+                            array_push()
+                            <span>
+                                Ajoute un élément à la fin.
+                            </span>
+                        </li>
+                        <li>
+                            array_pop()
+                            <span>
+                                Supprime le dernier élément.
+                            </span>
+                        </li>
+                        <li>
+                            array_shift() / array_unshift()
+                            <span>
+                                Supprime / ajoute au
+                            </span>
+                            début.
+                        </li>
+                        <li>
+                            array_merge()
+                            <span>
+                                Fusionne plusieurs tableaux.
+                            </span>
+                        </li>
+                        <li>
+                            array_slice()
+                            <span>
+                                Extrait une partie du tableau.
+                            </span>
+                        </li>
+                        <li>
+                            array_keys() / array_values()
+                            <span>
+                                Retourne les clés /
+                            </span>
+                            valeurs.
+                        </li>
+                        <li>
+                            foreach ($array as $val)
+                            <span>
+                                Parcourt un tableau.
+                            </span>
+                        </li>
+                        <li>
+                            implode()
+                            <span>
+                                Transforme un tableau en chaîne.
+                            </span>
+                        </li>
+                        <li>
+                            explode()
+                            <span>
+                                Transforme une chaîne en tableau.
+                            </span>
+                        </li>
+                        <li>
+                            sort() / rsort()
+                            <span>
+                                Trie un tableau (croissant /
+                            </span>
+                            décroissant).
+                        </li>
+                        <li>
+                            array_filter()
+                            <span>
+                                Garde les éléments selon une condition.
+                            </span>
+                        </li>
+                        <li>
+                            array_map()
+                            <span>
+                                Applique une fonction à chaque élément.
+                            </span>
+                        </li>
+                        <li>
+                            array_reduce()
+                            <span>
+                                Réduit un tableau à une seule valeur.
+                            </span>
+                        </li>
+                        <li>
+                            array_search()
+                            <span>
+                                Cherche une valeur et retourne sa clé.
+                            </span>
+                        </li>
+                        <li>
+                            array_reverse()
+                            <span>
+                                Inverse l’ordre des éléments.
+                            </span>
+                        </li>
+                        <li>
+                            exemples:
+                            <pre><code>&lt;?php
+    $nombres = [1, 2, 3, 4, 5];
+    array_push($nombres, 6);  // ajoute 6
+    print_r($nombres);  // affiche [1, 2, 3, 4, 5, 6]
+    ?&gt;</code></pre>
+                        </li>
+                    </code>
+                </ul>
+            </li>
+
+            <li>liste
+                <ul>
+                    <li>indexée numériquement</li>
+                    <li>commence à 0</li>
+                    <li>
+                        accès par position:
+                        <code>$list[index]</code>
+                    </li>
+                    <li>
+                        modifie par position:
+                        <code>$list[index] = valeur</code>
+                    </li>
+                    <li>
+                        ajoute un élément:
+                        <code>$list[] = valeur</code>
+                    </li>
+                    <li>
+                        longueur:
+                        <code>count($list)</code>
+                    </li>
+                    <li>
+                        parcourir:
+                        <code>foreach ($list as $val) { ... }</code>
+                    </li>
+                    <li>
+                        vérifier existence:
+                        <code>in_array(valeur, $list)</code>
+                    </li>
+                    <li>
+                        supprimer le dernier élément:
+                        <code>array_pop($list)</code>
+                    </li>
+                    <li>
+                        supprimer le premier élément:
+                        <code>array_shift($list)</code>
+                    </li>
+                    <li>
+                        trier:
+                        <code>sort($list)</code>
+                    </li>
+                    <li>
+                        trier décroissant:
+                        <code>rsort($list)</code>
+                    </li>
+                    <li>
+                        fusionner:
+                        <code>$newList = array_merge($list1, $list2)</code>
+                    </li>
+                    <li>
+                        extraire une partie:
+                        <code>$subList = array_slice($list, start,
+                            length)</code>
+                    </li>
+                    <li>
+                        obtenir les clés:
+                        <code>$keys = array_keys($list)</code>
+                    </li>
+                    <li>
+                        obtenir les valeurs:
+                        <code>$values = array_values($list)</code>
+                    </li>
+                    <li>
+                        transformer en chaîne:
+                        <code>$str = implode(", ", $list)</code>
+                    </li>
+                    <li>
+                        créer à partir d'une chaîne:
+                        <code>$list = explode(", ", $str)</code>
+                    </li>
+                    <li>
+                        appliquer une fonction:
+                        <code>$newList = array_map('fonction', $list)</code>
+                    </li>
+                    <li>
+                        filtrer selon une condition:
+                        <code>$filtered = array_filter($list, 'fonction')</code>
+                    </li>
+                    <li>
+                        réduire à une valeur:
+                        <code>$result = array_reduce($list, 'fonction')</code>
+                    </li>
+                    <li>
+                        chercher une valeur:
+                        <code>$key = array_search(valeur, $list)</code>
+                    </li>
+                    <li>
+                        inverser l'ordre:
+                        <code>$reversed = array_reverse($list)</code>
+                    </li>
+                    <li>
+                        parcourir avec clé:
+                        <code>foreach ($list as $index => $val) { ... }</code>
+                    </li>
+                    <li>
+                        vider la liste:
+                        <code>$list = []</code>
+                    </li>
+                    <li>
+                        vérifier si vide:
+                        <code>empty($list)</code>
+                    </li>
+                    <li>
+                        fusionner des listes:
+                        <code>$merged = array_merge($list1, $list2)</code>
+                    </li>
+                    <li>
+                        diviser une liste:
+                        <code>list($a, $b) = $list;</code>
+                    </li>
+                    <li>
+                        compter les occurrences:
+                        <code>$counts = array_count_values($list)</code>
+                    </li>
+                    <li>
+                        obtenir une clé aléatoire:
+                        <code>$key = array_rand($list)</code>
+                    </li>
+                    <li>
+                        mélanger la liste:
+                        <code>shuffle($list)</code>
+                    </li>
+                    <li>
+                        convertir en tableau associatif:
+                        <code>$assoc = array_combine($keys, $list)</code>
+                    </li>
+                    <li>
+                        convertir en liste indexée:
+                        <code>$indexed = array_values($assoc)</code>
+                    </li>
+                    <li>
+                        supprimer des doublons:
+                        <code>$unique = array_unique($list)</code>
+                    </li>
+                    <li>
+                        trier selon une fonction:
+                        <code>usort($list, 'fonction')</code>
+                    </li>
+                    <li>
+                        trier en conservant les clés:
+                        <code>asort($assoc)</code>
+                    </li>
+                    <li>
+                        trier en ordre inverse en conservant les clés:
+                        <code>arsort($assoc)</code>
+                    </li>
+                    <li>
+                        fusionner des tableaux multidimensionnels:
+                        <code>array_merge_recursive($array1, $array2)</code>
+                    </li>
+                    <li>
+                        obtenir la première clé:
+                        <code>$firstKey = array_key_first($assoc)</code>
+                    </li>
+                    <li>
+                        obtenir la dernière clé:
+                        <code>$lastKey = array_key_last($assoc)</code>
+                    </li>
+
+                    <li>exemple:
+                        <pre><code>&lt;?php
+$fruits = array("pomme", "banane", "orange");
+echo $fruits[0];  // affiche "pomme"
+                        ?&gt;</code></pre>
+                    </li>
+                </ul>
+                <li>objet</li>
+                <pre><code>&lt;?php
+class Personne {
+    public $nom;
+    public $age;
+    function __construct($nom, $age) {
+        $this->nom = $nom;
+        $this->age = $age;
+    }
+}
+$personne = new Personne("Charlie", 25);
+echo $personne->nom;  // affiche "Charlie"
+                        ?&gt;</code></pre>
+
+            </ul>
+
+            <h4>conditions</h4>
+            <pre><code>&lt;?php
+$age = 20;
+if ($age &gt;= 18) {
+    echo "Adulte";
+} else {
+    echo "Mineur";
+}
+?&gt;</code></pre>
+
+            <h4>boucles</h4>
+            <pre><code>&lt;?php
+for ($i = 1; $i &lt;= 5; $i++) {
+    echo "Numéro: " . $i . "\n";
+}
+?&gt;</code></pre>
+
+            <h4>fonctions</h4>
+            <ul>
+                <li>Déclare une fonction:
+                    <code>function nom($param1,$param2,...){code}</code>
+                </li>
+                <li>anonymous function:
+                    <code>$f = function() {};</code>
+                </li>
+                <li>Peut prendre des paramètres</li>
+                <li>Peut retourner une valeur avec <b>return</b></li>
+                <li><b>global</b> Utilise une variable globale dans une
+                    fonction.</li>
+                <li><b>static</b> Conserve la valeur d’une variable locale entre
+                    appels.</li>
+                <li><code>call_user_func()</code> Appelle une fonction
+                    dynamiquement.</li>
+                <li>exemple:
+                    <pre><code>&lt;?php
+function additionner($a, $b) {
+    return $a + $b;
+}
+echo additionner(5, 3);  // affiche 8
+?&gt;</code></pre>
+                </li>
+            </ul>
+
+        </body>
+
+        <style>
+        code {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+        }
+        span {
+            color: green;
+            font-size: 0.9em;
+        }
+    </style>
+        <script src></script>
+    </html>
