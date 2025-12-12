@@ -13,18 +13,7 @@ body {
 }
 
 
-
-div#jsScript {
-  margin: auto;
-  width: 90vw;
-  height: 90%;
-  margin: auto;
-  border: solid 5px red;
-  background-color: rgb(61, 0, 12);
-  font-size: 24px;
-  color: white;
-}
-
+/* #region nav test */
 #navbar {
   position: fixed;
   top: 0;
@@ -38,7 +27,46 @@ div#jsScript {
 
 /* Classe CSS qui sera ajoutée/retirée par JavaScript */
 .scrolled {
-  height: 150px !important; /* Petite hauteur après défilement */
+  height: 200px !important; /* Petite hauteur après défilement */
   background-color: #333 !important; /* Couleur de fond sombre */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+/* #endregion nav test */
+
+
+
+.content{
+  display: flex;
+  flex-direction: row;
+  border: solid 10px blue;
+  width: 95vw;
+}
+
+
+
+
+div#jsScript {
+  width: 50%;
+  height: 90%;
+  border: solid 5px red;
+  background-color: rgb(61, 0, 12);
+  font-size: 1rem;
+  color: white;
+}
+
+
+
+
+
+/* #region fram */
+.visu-code{
+  width: 50%;
+  /* height: 100%; */
+  border: solid 5px green;
+}
+iframe{
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/* #endregion fram */
